@@ -1,7 +1,7 @@
 // import functions and grab DOM elements
-import { countsAsYes } from "./utils.js"
+import { countsAsYes } from './utils.js';
 
-const quizButton = document.getElementById("quiz-button");
+const quizButton = document.getElementById('quiz-button');
 
 const results = document.getElementById('results');
 
@@ -21,5 +21,19 @@ quizButton.addEventListener('click', () => {
     const secondAnswer = prompt('Is the Autonomic Nervous System made of only 2 parts?');
     const thirdAnswer = prompt('Can diseases affect both specific nerves or the system as a whole?');
 
-})
+    if (countsAsYes(firstAnswer) === true) {
+        score++;
+    }
+    
+    if (countsAsYes(secondAnswer) === false) {
+        score++;
+    }
+    if (countsAsYes(thirdAnswer) === true) {
+        score++;
+    }
+    // eslint-disable-next-line indent
+    const resultsString = `Good work ${name}, you got ${score} correct.`;
+    results.textContent = resultsString;
+    
+});
 // set event listeners to update state and DOM
