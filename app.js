@@ -2,18 +2,18 @@
 import { countsAsYes } from './utils.js';
 
 const quizButton = document.getElementById('quiz-button');
-
 const results = document.getElementById('results');
 
 quizButton.addEventListener('click', () => {
+    
     const confirmQuiz = confirm(`Do you reaaaaaally want to take the Quiz?`);
+    
     if (confirmQuiz === false) {
         alert(`That's okay! Try another time.`);
         return;
     }
 
-    const name = prompt(`What is your name?`);
-    console.log(name);
+    const name = prompt(`What is your name?`);   
     
     let score = 0;
 
@@ -24,16 +24,28 @@ quizButton.addEventListener('click', () => {
     if (countsAsYes(firstAnswer) === true) {
         score++;
     }
-    
+    console.log(score);
+
     if (countsAsYes(secondAnswer) === false) {
         score++;
     }
     if (countsAsYes(thirdAnswer) === true) {
         score++;
     }
-    // eslint-disable-next-line indent
-    const resultsString = `Good work ${name}, you got ${score} correct.`;
-    results.textContent = resultsString;
+
+    alert(`You've finished the quiz! Click okay to see your score.`);
+
+    score = Math.round((score / 3) * 100);
+
+    if (score >= 2) {
+        results.classList.add('green');
+        const resultsString = `Amazing work ${name}, you got ${score}% correct.`;
+        results.textContent = resultsString;
+    } else {
+        results.classList.add('red');
+        const resultsString = `Sorry ${name}, you only got ${score} correct.`;
+        results.textContent = resultsString;
+    }
     
 });
 // set event listeners to update state and DOM

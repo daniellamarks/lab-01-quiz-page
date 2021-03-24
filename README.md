@@ -52,4 +52,11 @@ Visit this page and read about Chrome's built-in accessibility auditing tools. F
         -returns a boolean based on user input
         -i.e. countsAsAYes('yep') should return "true"
         -i.e. countsAsAYes('nah') should return "false"
+
+
+Alert the user that the quiz is complete and their results will now be written to the webpage.
+
+Add a class to style the result differently based on good or bad score.
+Add different text content ('Great work!' 'Needs improvement!', etc) based on user's results
+Include a percentage, without decimal places.
         

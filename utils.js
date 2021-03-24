@@ -1,6 +1,6 @@
 export function countsAsYes(userInput) { 
     const firstLetter = userInput[0];
-    if (firstLetter.toLowerCase() === 'y') return false;
+    if (firstLetter.toLowerCase() === 'y') return true;
     return false;
 }
 
