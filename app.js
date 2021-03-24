@@ -48,4 +48,3 @@ quizButton.addEventListener('click', () => {
     }
     
 });
-// set event listeners to update state and DOM
