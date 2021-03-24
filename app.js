@@ -17,9 +17,9 @@ quizButton.addEventListener('click', () => {
     
     let score = 0;
 
-    const firstAnswer = prompt('Is the peripheral nervous system one of two parts of the nervous system?')
-    const secondAnswer = prompt('')
-    const thirdAnswer = prompt('')
+    const firstAnswer = prompt('Is the peripheral nervous system one of two parts of the nervous system?');
+    const secondAnswer = prompt('Is the Autonomic Nervous System made of only 2 parts?');
+    const thirdAnswer = prompt('Can diseases affect both specific nerves or the system as a whole?');
 
 })
 // set event listeners to update state and DOM
